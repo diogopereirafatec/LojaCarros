@@ -31,7 +31,7 @@ return [
     */
 
     'logo' => '<b>Loja de Carros</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'vendor/adminlte/dist/img/car.png',
     'logo_img_class' => 'brand-image-xl',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -175,7 +175,7 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
+            'text' => 'Buscar',
             'search' => true,
             'topnav' => true,
         ],
@@ -185,13 +185,69 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
+            'text'        => 'Estoque',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'submenu' => [
+                [
+                    'text' => 'Adicionar Carros',
+                    'url'  => '#',
+                    'icon' => 'fas fa-car',
+                ],
+                [
+                    'text' => 'Adicionar Promoção',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Estoque',
+                    'url'  => '#',
+                ],
+            ],
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Equipe'],
+        [
+            'text'    => 'Cadastros',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Cadastro de Vendedores',
+                    'url'  => '#',
+                    'icon_color' => 'green',
+                    'icon' => 'fas fa-user-plus',
+                ],
+                [
+                    'text' => 'Cadastro de Compradores',
+                    'url'  => '#',
+                    'icon_color' => 'green',
+                    'icon' => 'fas fa-user-plus',
+                ],
+                [
+                    'text' => 'Exclusão de Funcionários',
+                    'url'  => '#',
+                    'icon_color' => 'red',
+                    'icon' => 'fas fa-user-minus',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Lista de Funcionários',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Vendedores',
+                    'url'  => '#',
+                    'icon_color' => 'light green',
+                    'icon' => 'fas fa-address-book',
+                ],
+                [
+                    'text' => 'Lista de Compradores',
+                    'url'  => '#',
+                    'icon_color' => 'green',
+                    'icon' => 'fas fa-address-book',
+                ],
+            ],
+        ],
+
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -202,44 +258,7 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
+
         ['header' => 'labels'],
         [
             'text'       => 'important',
