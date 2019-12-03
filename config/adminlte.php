@@ -202,6 +202,16 @@ return [
                     'text' => 'Estoque',
                     'url'  => '#',
                 ],
+
+                [
+                    'text' => 'Marcas',
+                    'url'  => '/marcas',
+                    'icon' => 'fas fa-car',
+                ],
+                [
+                    'text' => 'Modelos',
+                    'url'  => '/modelos',
+                ],
             ],
         ],
         ['header' => 'Equipe'],
