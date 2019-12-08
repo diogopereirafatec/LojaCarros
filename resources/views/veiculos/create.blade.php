@@ -1,0 +1,63 @@
+@extends('adminlte::page')
+
+@section('title', 'Loja de Carros')
+
+@section('content_header')
+<h1><i class="fas fa-fx fa-car"></i>Inclusão de Novo Veículo</h1>
+@stop
+
+@section('content')
+<form method="post" action="{{ route('veiculos.store') }}" enctype="multipart/form-data">
+     {{ csrf_field() }}
+     <div class="panel panel-default">
+          <div class="panel-body">
+               <div class="row">
+                    <div class="form-group col-md-6">
+                         <label>Nome do Veículo <span class="text-red">*</span></label>
+                         <input type="text" name="nome_veiculo" id="nome_veiculo" class="form-control" required>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="form-group col-md-6">
+                         <label>Cor do Veículo <span class="text-red">*</span>
+                         <input type="color" name="cor" id="cor" class="form-control form-group col-md-6" required>
+                         </label>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="form-group col-md-6">
+                         <label>Valor do Veículo <span class="text-red">*</span></label>
+                         <input type="number" name="valor" id="valor" min="0" step="0.5" class="form-control form-group col-md-6" required>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="form-group col-md-6">
+                         <label>Ano do Veículo <span class="text-red">*</span></label>
+                         <input type="number" name="ano" id="ano" min="1950" step="1" class="form-control form-group col-md-6" required>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="form-group col-md-6">
+                         <label>Km Rodado <span class="text-red">*</span></label>
+                         <input type="number" name="km_rodado" id="km_rodado" min="0" step="1" class="form-control form-group col-md-6" required>
+                    </div>
+               </div>
+
+          </div>
+          <div class="panel-footer">
+               <a href="{{ route('veiculos.index') }}" class="btn btn-default">
+                    <i class="fas fa-reply"></i> Voltar
+               </a>
+               <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save"></i> Gravar
+               </button>
+          </div>
+     </div>
+</form>
+@stop
+
+@section('css')
+@stop
+
+@section('js')
+@stop

@@ -191,7 +191,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Adicionar Carros',
-                    'url'  => '#',
+                    'url'  => '/veiculos',
                     'icon' => 'fas fa-car',
                 ],
                 [
@@ -200,7 +200,7 @@ return [
                 ],
                 [
                     'text' => 'Estoque',
-                    'url'  => '#',
+                    'url'  => '/veiculos/listar',
                 ],
 
                 [

@@ -30,7 +30,7 @@
           </div>
 
           <div class="panel-footer">
-               <a href="{{ route('marcas.index') }}" class="btn btn-default">
+               <a href="{{ route('modelos.index') }}" class="btn btn-default">
                     <i class="fas fa-reply"></i> Voltar
                </a>
 
