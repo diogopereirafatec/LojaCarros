@@ -20,4 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/marcas', 'marcasController')->middleware('auth');
 Route::resource('/modelos', 'modelosController')->middleware('auth');
-Route::resource('/veiculos', 'veiculosController')->middleware('auth');
+Route::resource('/cargos', 'cargosController')->middleware('auth');
+Route::resource('/veiculos', 'veiculosController');

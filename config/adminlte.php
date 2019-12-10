@@ -175,18 +175,25 @@ return [
 
     'menu' => [
         [
-            'text' => 'Buscar',
-            'search' => true,
+            'text' => 'Veículos',
+            'icon' => 'fas fa-car',
             'topnav' => true,
+            'url'  => '/veiculos',
+        ],
+        [
+            'text' => 'Marcas',
+            'icon' => 'fas fa-car',
+            'topnav' => true,
+            'url'  => '/marcas',
         ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        ['header' => 'Veículos'],
         [
             'text'        => 'Estoque',
-            'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'submenu' => [
                 [
@@ -256,31 +263,6 @@ return [
                     'icon' => 'fas fa-address-book',
                 ],
             ],
-        ],
-
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
         ],
     ],
 
