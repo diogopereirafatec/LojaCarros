@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {return view('/home');});
+Route::get('/','veiculosController@listar')->name('home');
+Route::get('/home','veiculosController@listar')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/marcas', 'marcasController')->middleware('auth');
 Route::resource('/modelos', 'modelosController')->middleware('auth');
 Route::resource('/cargos', 'cargosController')->middleware('auth');
-Route::resource('/veiculos', 'veiculosController');
+Route::resource('/veiculos', 'veiculosController')->middleware('auth');
+Route::resource('/funcionarios', 'FuncionariosController')->middleware('auth');

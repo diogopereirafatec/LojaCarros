@@ -135,7 +135,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 
@@ -175,18 +175,6 @@ return [
 
     'menu' => [
         [
-            'text' => 'Veículos',
-            'icon' => 'fas fa-car',
-            'topnav' => true,
-            'url'  => '/veiculos',
-        ],
-        [
-            'text' => 'Marcas',
-            'icon' => 'fas fa-car',
-            'topnav' => true,
-            'url'  => '/marcas',
-        ],
-        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
@@ -197,6 +185,10 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'submenu' => [
                 [
+                    'text' => 'Estoque',
+                    'url'  => '/',
+                ],
+                [
                     'text' => 'Adicionar Carros',
                     'url'  => '/veiculos',
                     'icon' => 'fas fa-car',
@@ -204,10 +196,6 @@ return [
                 [
                     'text' => 'Adicionar Promoção',
                     'url'  => '#',
-                ],
-                [
-                    'text' => 'Estoque',
-                    'url'  => '/veiculos/listar',
                 ],
 
                 [
@@ -227,41 +215,18 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Cadastro de Vendedores',
-                    'url'  => '#',
-                    'icon_color' => 'green',
-                    'icon' => 'fas fa-user-plus',
-                ],
-                [
-                    'text' => 'Cadastro de Compradores',
-                    'url'  => '#',
-                    'icon_color' => 'green',
-                    'icon' => 'fas fa-user-plus',
-                ],
-                [
-                    'text' => 'Exclusão de Funcionários',
-                    'url'  => '#',
-                    'icon_color' => 'red',
-                    'icon' => 'fas fa-user-minus',
-                ],
-            ],
-        ],
-        [
-            'text'    => 'Lista de Funcionários',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'Lista de Vendedores',
+                    'text' => 'Lista de Funcionários',
                     'url'  => '#',
                     'icon_color' => 'light green',
                     'icon' => 'fas fa-address-book',
                 ],
                 [
-                    'text' => 'Lista de Compradores',
+                    'text' => 'Cadastro de Funcionários',
                     'url'  => '#',
                     'icon_color' => 'green',
-                    'icon' => 'fas fa-address-book',
+                    'icon' => 'fas fa-user-plus',
                 ],
+
             ],
         ],
     ],

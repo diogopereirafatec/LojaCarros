@@ -3,7 +3,7 @@
 @section('title', 'Loja de Carros')
 
 @section('content_header')
-    <h1><i class="fas fa-bars"></i>Lista de Marcas</h1>
+    <h1><i class="fas fa-bars"></i> Lista de Marcas</h1>
 @stop
 
 @section('content')
@@ -14,6 +14,7 @@
             <a href="{{ route('marcas.create') }}" class="btn btn-success"><i class="fas fa-plus"></i> Inserir um Novo Registro</a>
         </div>
     </div>
+    </br>
     <div class="panel-body">
         <table id="table-marcas" class="table table-striped table-bordered table-hover">
             <thead>
