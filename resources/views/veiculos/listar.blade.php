@@ -28,7 +28,7 @@
 	@foreach($veiculos as $veiculo)
     <div class="col-md-3">
 		<div class="panel panel-info">
-			<div class="panel-heading"><strong>{{$veiculo->nome_veiculo}}</strong></div>
+			<div class="panel-heading"><strong>{{$veiculo->nome_veiculo}} - {{ App\modelos::find($veiculo->modelos_id)->qtde_portas }} Portas</strong></div>
 			<div class="panel-body">
                 <p><strong>Cor:</strong> <svg width="50" height="25">
                     <rect width="300" height="100" style="fill:{{$veiculo->cor}}"; />

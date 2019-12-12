@@ -13,36 +13,52 @@
           <div class="panel-body">
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label>Nome do Veículo <span class="text-red">*</span></label>
-                         <input type="text" name="nome_veiculo" id="nome_veiculo" class="form-control" required>
+                         <input type="text" name="nome_veiculo" id="nome_veiculo" class="form-control" required placeholder="Nome do Veículo">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label>Cor do Veículo <span class="text-red">*</span>
-                         <input type="color" name="cor" id="cor" class="form-control form-group col-md-6" required>
+                         <input type="color" name="cor" id="cor" class="form-control form-group col-md-6" required placeholder="Cor do Veículo">
                          </label>
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label>Valor do Veículo <span class="text-red">*</span></label>
-                         <input type="number" name="valor" id="valor" min="0" step="0.5" class="form-control form-group col-md-6" required>
+                         <input type="number" name="valor" id="valor" min="0" step="0.5" class="form-control form-group col-md-6" required placeholder="Valor do Veículo">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label>Ano do Veículo <span class="text-red">*</span></label>
-                         <input type="number" name="ano" id="ano" min="1950" step="1" class="form-control form-group col-md-6" required>
+                         <input type="number" name="ano" id="ano" min="1950" step="1" class="form-control form-group col-md-6" required placeholder="Ano de Fabricação">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label>Km Rodado <span class="text-red">*</span></label>
-                         <input type="number" name="km_rodado" id="km_rodado" min="0" step="1" class="form-control form-group col-md-6" required>
+                         <input type="number" name="km_rodado" id="km_rodado" min="0" step="1" class="form-control form-group col-md-6" required placeholder="Km do Veículo">
                     </div>
                </div>
-
+               <div class="row">
+                    <div class="form-group col-md-6">
+                        <select id="marcas_id" name="marcas_id" placeholder="Escolha uma marca" required>
+                        <option value="">Escolha uma Marca</option>
+                            {{$marcas = App\marcas::all()}}
+                            @foreach($marcas as $marca)
+                                <option value="{{$marca->id}}">{{$marca->nome_marca}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+               <div class="row">
+                    <div class="form-group col-md-6">
+                        <select id="modelos_id" name="modelos_id"  required>
+                            <option value="">Escolha um Modelo</option>
+                            {{$modelos = App\modelos::all()}}
+                            @foreach($modelos as $modelo)
+                                <option value="{{$modelo->id}}">{{$modelo->nome_modelo}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
           </div>
           <div class="panel-footer">
                <a href="{{ route('veiculos.index') }}" class="btn btn-default">

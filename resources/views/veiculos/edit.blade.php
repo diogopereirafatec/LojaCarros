@@ -15,47 +15,59 @@
           <div class="panel-body">
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label>Nome do Veículo <span class="text-red">*</span></label>
-                         <input type="text" name="nome_veiculo" id="nome_veiculo" class="form-control" required value="{{ $veiculos->nome_veiculo }}">
+                         <input type="text" name="nome_veiculo" id="nome_veiculo" placeholder="Nome do Veículo" class="form-control" required value="{{ $veiculos->nome_veiculo }}">
                     </div>
                </div>
-               <div class="row">
-                    <div class="form-group col-md-6">
-                         <label>Cor do Veículo</label>
-                         <input type="color" name="cor" id="cor" class="form-control form-group col-md-6" required value="{{ $veiculos->cor }}">
-                    </div>
+               <div class="row" style="display:inline">
+                         <input type="color" name="cor" id="cor" class="form-control form-group col-md-6" placeholder="Cor do Veículo" required value="{{ $veiculos->cor }}">
                </div>
 
                <div class="row">
                     <div class="form-group col-md-6">
-                         <labe>Valor</label>
-                         <input type="number" name="valor" id="valor" step="0.5" class="form-control" required value="{{ $veiculos->valor }}">
+                         <input type="number" name="valor" id="valor" step="0.5" class="form-control" placeholder="Valor do Veículo" required value="{{ $veiculos->valor }}">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <labe>Ano</label>
-                         <input type="number" name="ano" id="ano" class="form-control" required value="{{ $veiculos->ano }}">
+                         <input type="number" name="ano" id="ano" class="form-control" placeholder="Ano de Fabricação" required value="{{ $veiculos->ano }}">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <labe>Quilometragem Rodada</label>
-                         <input type="number" name="km_rodado" id="km_rodado" class="form-control" required value="{{ $veiculos->km_rodado }}">
+                         <input type="number" name="km_rodado" id="km_rodado" class="form-control" placeholder="Km do Veículo" required value="{{ $veiculos->km_rodado }}">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <labe>Marca</label>
-                         <input type="number" name="marcas_id" id="marcas_id" class="form-control" required value="{{ $veiculos->marcas_id }}">
+                        <label>Marca <span class="text-red">*</span></label>
+                        <select id="marcas_id" name="marcas_id" placeholder="Escolha uma marca" required>
+                            <option value="{{ App\marcas::find($veiculos->marcas_id)->id }}">
+                            {{ App\marcas::find($veiculos->marcas_id)->nome_marca }}
+                            </option>
+                            {{ $veiculos->marcas_id }}
+                            {{$marcas = App\marcas::all()}}
+                            @foreach($marcas as $marca)
+                                <option value="{{$marca->id}}">{{$marca->nome_marca}}</option>
+                            @endforeach
+                        </select>
                     </div>
-               </div>
+                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <labe>Modelo</label>
-                         <input type="number" name="modelos_id" id="modelos_id" class="form-control" required value="{{ $veiculos->modelos_id }}">
+                        <label>Modelo <span class="text-red">*</span></label>
+                        <select id="modelos_id" name="modelos_id"  required>
+                            <option value="{{ App\modelos::find($veiculos->modelos_id)->id }}">
+                            {{ App\modelos::find($veiculos->modelos_id)->nome_modelo }}
+                            </option>
+                            {{ $veiculos->modelos_id }}
+                            {{$modelos = App\modelos::all()}}
+                            @foreach($modelos as $modelo)
+                                <option value="{{$modelo->id}}">{{$modelo->nome_modelo}}</option>
+                            @endforeach
+                        </select>
                     </div>
-               </div>
+                </div>
+
           </div>
 
           <div class="panel-footer">
