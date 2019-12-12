@@ -216,7 +216,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Lista de Funcionários',
-                    'url'  => '#',
+                    'url'  => '/funcionarios',
                     'icon_color' => 'light green',
                     'icon' => 'fas fa-address-book',
                 ],

@@ -18,7 +18,7 @@
     <div class="panel-body">
         <table id="table-veiculos" class="table table-striped table-bordered table-hover">
             <thead>
-                <tr>
+                <tr align="center">
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Cor</th>
@@ -31,15 +31,18 @@
             </thead>
             <tbody>
                 @foreach($veiculos as $veiculo)
-                <tr>
+                <tr align="center">
                     <td>{{ $veiculo->id }}</td>
                     <td>{{ $veiculo->nome_veiculo }}</td>
-                    <td>{{ $veiculo->cor }}</td>
+                    <td><svg width="50" height="25">
+                    <rect width="300" height="100" style="fill:{{$veiculo->cor}}"; />
+                    Sorry, your browser does not support inline SVG.
+                    </svg></td>
                     <td>{{ $veiculo->valor }}</td>
                     <td>{{ $veiculo->ano }}</td>
                     <td>{{ $veiculo->km_rodado }}</td>
-                    <td>{{ $veiculo->marcas_id }}</td>
-                    <td>{{ $veiculo->modelos_id }}</td>
+                    <td>{{ App\marcas::find($veiculo->marcas_id)->nome_marca }}</td>
+                    <td>{{ App\modelos::find($veiculo->modelos_id)->nome_modelo }}</td>
                     <td>
                         <!-- botao de detalhes do registro -->
                         <a href="{{ route('veiculos.show', $veiculo) }}" class="btn btn-xs btn-primary">

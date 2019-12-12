@@ -1,85 +1,55 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Funcionarios;
+use App\funcionarios;
+use App\cargos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class FuncionariosController extends Controller
+class funcionariosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected $fillable = ['cargos_id','nome_cargo'];
+
     public function index()
     {
-        return view('funcionarios.index');
+        //$funcionarios = funcionarios::orderBy('created_at', 'asc')->paginate(10);
+        $funcionarios = funcionarios::with('cargo')->get();
+        return view('funcionarios.index',compact("funcionarios"));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('funcionarios.create');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $funcionarios = new funcionarios;
+        $funcionarios->nome = $request->nome;
+        $funcionarios->ctps = $request->ctps;
+        $funcionarios->cracha = $request->cracha;
+        $funcionarios->cargos_id = $request->cargos_id;
+        $funcionarios->save();
+        return redirect()->route('funcionarios.index')->with('message', 'Funcionário adicionado com Sucesso!');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
+    }
+
+    public function cargo()
+    {
+        return $this->belongsTo(cargos::class);
     }
 }

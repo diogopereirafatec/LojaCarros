@@ -29,7 +29,7 @@
                <div class="row">
                     <div class="form-group col-md-6">
                          <labe>Valor</label>
-                         <input type="number" name="valor" id="valor" class="form-control" required value="{{ $veiculos->valor }}">
+                         <input type="number" name="valor" id="valor" step="0.5" class="form-control" required value="{{ $veiculos->valor }}">
                     </div>
                </div>
                <div class="row">

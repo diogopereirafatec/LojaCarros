@@ -13,6 +13,7 @@
 
 //Route::get('/', function () {return view('/home');});
 Route::get('/','veiculosController@listar')->name('home');
+//Route::get('/veiculos/{id}','veiculosController@show');
 Route::get('/home','veiculosController@listar')->name('home');
 
 Auth::routes();
@@ -22,4 +23,4 @@ Route::resource('/marcas', 'marcasController')->middleware('auth');
 Route::resource('/modelos', 'modelosController')->middleware('auth');
 Route::resource('/cargos', 'cargosController')->middleware('auth');
 Route::resource('/veiculos', 'veiculosController')->middleware('auth');
-Route::resource('/funcionarios', 'FuncionariosController')->middleware('auth');
+Route::resource('/funcionarios', 'funcionariosController')->middleware('auth');
