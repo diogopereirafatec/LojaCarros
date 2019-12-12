@@ -27,8 +27,8 @@ class veiculosController extends Controller
         $veiculos->valor = $request->valor;
         $veiculos->ano = $request->ano;
         $veiculos->km_rodado = $request->km_rodado;
-        $veiculos->marcas_id = 1;
-        $veiculos->modelos_id = 1;
+        $veiculos->marcas_id = $request->marcas_id;
+        $veiculos->modelos_id = $request->modelos_id;
 
         $veiculos->save();
         return redirect()->route('veiculos.index')->with('message', 'Veículo adicionado com Sucesso!');
