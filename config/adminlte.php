@@ -194,11 +194,6 @@ return [
                     'icon' => 'fas fa-car',
                 ],
                 [
-                    'text' => 'Adicionar Promoção',
-                    'url'  => '#',
-                ],
-
-                [
                     'text' => 'Marcas',
                     'url'  => '/marcas',
                     'icon' => 'fas fa-car',
@@ -206,6 +201,7 @@ return [
                 [
                     'text' => 'Modelos',
                     'url'  => '/modelos',
+                    'icon' => 'fas fa-car',
                 ],
             ],
         ],
@@ -215,16 +211,16 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Lista de Funcionários',
-                    'url'  => '/funcionarios',
-                    'icon_color' => 'light green',
-                    'icon' => 'fas fa-address-book',
-                ],
-                [
                     'text' => 'Cadastro de Funcionários',
-                    'url'  => '#',
+                    'url'  => '/funcionarios',
                     'icon_color' => 'green',
                     'icon' => 'fas fa-user-plus',
+                ],
+                [
+                    'text' => 'Cadastro de Cargos',
+                    'url'  => '/cargos',
+                    'icon_color' => 'light green',
+                    'icon' => 'fas fa-address-book',
                 ],
 
             ],

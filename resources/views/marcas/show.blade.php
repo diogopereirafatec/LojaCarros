@@ -16,12 +16,12 @@
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped">
                 <tr>
-                    <th class="col-md-10">Nome da Marca</th>
-                    <th class="col-md-2">ID</th>
+                    <th>ID</th>
+                    <th>Nome da Marca</th>
                 </tr>
                 <tr>
-                    <td class="col-md-10">{{ $marcas->nome_marca }}</td>
-                    <td class="col-md-2">{{ $marcas->id }}</td>
+                    <td>{{ $marcas->nome_marca }}</td>
+                    <td>{{ $marcas->id }}</td>
                 </tr>
             </table>
         </div>

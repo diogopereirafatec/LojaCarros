@@ -12,14 +12,10 @@
      <input type="hidden" name="_method" value="PUT">
 
      <div class="panel panel-default">
-          <div class="panel-heading">
-               <i class="fas fa-fx fa-user"></i> Tela de alteração de dados
-          </div>
-
           <div class="panel-body">
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label for="nome">Nome da Marca <span class="text-red">*</span></label>
+                         <label for="nome">Nome da Marca</label>
                          <input type="text" name="nome_marca" id="nome_marca" class="form-control" required value="{{ $marcas->nome_marca }}">
                     </div>
                </div>

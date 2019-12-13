@@ -18,14 +18,15 @@
     <div class="panel-body">
         <table id="table-marcas" class="table table-striped table-bordered table-hover">
             <thead>
-                <tr>
+            <tr align="center">
                     <td>ID</td>
                     <td>Nome da Marca</td>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($marcas as $marca)
-                <tr>
+                <tr align="center">
                     <td>{{ $marca->id }}</td>
                     <td>{{ $marca->nome_marca }}</td>
                     <td>

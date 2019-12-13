@@ -27,6 +27,7 @@
                     <th>Km Rodado</th>
                     <th>Marca</th>
                     <th>Modelo</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

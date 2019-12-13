@@ -32,20 +32,27 @@ class funcionariosController extends Controller
     }
     public function show($id)
     {
-        //
+        $funcionarios = funcionarios::find($id);
+        return view('funcionarios.show', compact('funcionarios'));
     }
     public function edit($id)
     {
-        //
+        $funcionarios = funcionarios::findOrFail($id);
+        return view('funcionarios.edit',compact('funcionarios'));
     }
     public function update(Request $request, $id)
     {
-        //
+        $funcionarios = funcionarios::findOrFail($id);
+        $funcionarios->nome = $request->nome;
+        $funcionarios->save();
+        return redirect()->route('funcionarios.index')->with('message', 'Funcionário Atualizado com Sucesso!');
     }
 
     public function destroy($id)
     {
-        //
+        $funcionarios = funcionarios::findOrFail($id);
+        $funcionarios->delete();
+        return redirect()->route('funcionarios.index')->with('alert-success','Esta Funcionário será apagado!');
     }
 
     public function cargo()

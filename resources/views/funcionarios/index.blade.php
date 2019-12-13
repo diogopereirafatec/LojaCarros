@@ -23,6 +23,7 @@
                     <th>Nome</th>
                     <th>Crachá</th>
                     <th>Cargo</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

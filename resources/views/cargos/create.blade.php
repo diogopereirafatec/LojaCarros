@@ -10,15 +10,10 @@
 <form method="post" action="{{ route('cargos.store') }}" enctype="multipart/form-data">
      {{ csrf_field() }}
      <div class="panel panel-default">
-          <div class="panel-heading">
-               <i class="fas fa-fx fa-user"></i> Tela de cadastramento de Cargo
-          </div>
-
           <div class="panel-body">
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label for="nome">Nome do Cargo <span class="text-red">*</span></label>
-                         <input type="text" name="nome_cargo" id="nome_cargo" class="form-control" required>
+                         <input type="text" name="nome_cargo" id="nome_cargo" class="form-control" required placeholder="Nome do Cargo">
                     </div>
                </div>
           </div>

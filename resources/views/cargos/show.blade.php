@@ -11,13 +11,13 @@
     <div class="panel-body">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped">
-                <tr>
-                    <th class="col-md-10">Nome do Cargo</th>
-                    <th class="col-md-2">ID</th>
+                <tr align="center">
+                    <th>ID</th>
+                    <th>Nome do Cargo</th>
                 </tr>
-                <tr>
-                    <td class="col-md-10">{{ $cargos->nome_cargo }}</td>
-                    <td class="col-md-2">{{ $cargos->id }}</td>
+                <tr align="center">
+                    <td>{{ $cargos->id }}</td>
+                    <td>{{ $cargos->nome_cargo }}</td>
                 </tr>
             </table>
         </div>

@@ -46,10 +46,8 @@ class veiculosController extends Controller
     public function update(Request $request, $id)
     {
         $veiculos = veiculos::findOrFail($id);
-        $veiculos->nome_veiculo = $request->nome_veiculo;
         $veiculos->cor = $request->cor;
         $veiculos->valor = $request->valor;
-        $veiculos->ano = $request->ano;
         $veiculos->km_rodado = $request->km_rodado;
         $veiculos->save();
         return redirect()->route('veiculos.index')->with('message', 'Veículo Atualizado com Sucesso!');

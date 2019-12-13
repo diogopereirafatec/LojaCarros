@@ -15,13 +15,13 @@
           <div class="panel-body">
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label for="nome">Nome do Modelo <span class="text-red">*</span></label>
+                         <label for="nome">Nome do Modelo</label>
                          <input type="text" name="nome_modelo" id="nome_modelo" class="form-control" required value="{{ $modelos->nome_modelo }}">
                     </div>
                </div>
                <div class="row">
                     <div class="form-group col-md-6">
-                         <label for="nome">Quantidade de Portas <span class="text-red">*</span></label>
+                         <label for="nome">Quantidade de Portas</label>
                          <input type="number" name="qtde_portas" min="1" max="5" id="qtde_portas" class="form-control" required value="{{ $modelos->qtde_portas }}">
                     </div>
                </div>

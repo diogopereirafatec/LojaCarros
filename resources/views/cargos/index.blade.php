@@ -14,17 +14,19 @@
             <a href="{{ route('cargos.create') }}" class="btn btn-success"><i class="fas fa-plus"></i> Inserir um Novo Registro</a>
         </div>
     </div>
+    <br>
     <div class="panel-body">
         <table id="table-cargos" class="table table-striped table-bordered table-hover">
             <thead>
-                <tr>
+            <tr align="center">
                     <td>ID</td>
                     <td>Nome do Cargo</td>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($cargos as $cargo)
-                <tr>
+                <tr align="center">
                     <td>{{ $cargo->id }}</td>
                     <td>{{ $cargo->nome_cargo }}</td>
                     <td>

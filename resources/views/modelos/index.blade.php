@@ -18,15 +18,16 @@
     <div class="panel-body">
         <table id="table-modelos" class="table table-striped table-bordered table-hover">
             <thead>
-                <tr>
+            <tr align="center">
                     <td>ID</td>
                     <td>Nome do Modelo</td>
                     <td>Quantidade de Portas</td>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($modelos as $modelo)
-                <tr>
+                <tr align="center">
                     <td>{{ $modelo->id }}</td>
                     <td>{{ $modelo->nome_modelo }}</td>
                     <td>{{ $modelo->qtde_portas }}</td>

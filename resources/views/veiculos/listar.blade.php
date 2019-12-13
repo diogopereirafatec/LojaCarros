@@ -5,22 +5,19 @@
 @section('content_header')
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+@if (Route::has('login'))
+@auth
+@else
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"> Login</i></a>
+    @if (Route::has('register'))
+        <a class="navbar-brand" href="{{ route('register') }}"><i class="fas fa-portrait"> Register</i></a>
+    @endif
+</nav>
+    @endauth
+@endif
 
 <h1><i class="fas fa-car"></i>Lista de Veículos</h1>
-<div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                    </br>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 @stop
 
 @section('content')
